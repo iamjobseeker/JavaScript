@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"> 
+
+<style>
+
+/* 우선순위가 같으므로 나중것이 최종 적용된다 */
+div ul { border: 1px solid #808080; }  /* div의 하위(자손)들 중에서 ul */
+div > ul { border: 1px dotted tomato; } /* div의 바로 밑(자식) 중에서 ul */
+
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+
+<div>
+<ul>
+	<li>1</li>
+	<ul> 
+		<li>2</li>
+		<ul>
+			<li>2-1</li>
+			<li>2-2</li>
+		</ul>
+	</ul>
+</ul>
+</div>
+
+</body>
+</html>

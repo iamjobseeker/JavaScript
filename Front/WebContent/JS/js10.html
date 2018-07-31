@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+if(true){
+	console.log("출력");
+}
+for(var i=0; i<3; i++){
+	console.log("Hello");
+}
+
+console.log("--- for in loop ---"); // for each와 비슷하면서 다름
+// for(var data in arr) { }
+
+var arr1 = [10,20,30,40,50];
+arr1[9] = 100;
+for(var i in arr1){ // i는 인덱스
+	console.log(i); // arr1 인덱스 출력
+	console.log(arr1[i]); // arr1의 요소 출력하기
+} // 자료가 존재하는 인덱스만 출력한다 
+console.log("-----");
+console.log(arr1["3"]); // 문자열 인덱스도 인식가능
+
+console.log("-----");
+var arr2 = ["Apple", "Banana", "Cherry"];
+arr2[10] = "Durian";
+
+console.log(arr2);
+console.log("-----");
+for(var i in arr2){
+	console.log(arr2[i]);
+}
+
+console.log("--- 일반 for loop ---");
+for( var i=0; i<arr2.length; i++){
+	if(arr2[i] != undefined ) {
+//	if(arr2[i] != null ) // undefined, null은 같은 결과
+	console.log(arr2[i]);
+	}
+}
+
+</script></head>
+<body>
+
+</body>
+</html>

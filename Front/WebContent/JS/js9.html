@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var n1="123";
+var n2="34.5678"; 
+	
+// 문자->숫자	
+console.log(n1=Number(n1)); // 숫자는 파란색으로 표시
+console.log(n2=Number(n2)); 
+
+// 숫자->문자
+console.log("--- toString ---");
+console.log(n1.toString());
+console.log(n1.toString(2)); // 2진수문자
+console.log(n1.toString(8)); // 8진수문자
+console.log(n1.toString(16)); // 16진수문자
+
+// 숫자->문자
+console.log("--- toFixed --- ");
+console.log(n1.toFixed(2)); // 소수점 2자리
+console.log(n2.toFixed(3)); // 소수점 3자리
+
+console.log("--- function ---");
+
+// 함수 정의 코드
+function func() {
+	console.log("난 함수야!");
+}
+
+// 변수 func2에 함수를 선언
+// 함수 선언 코드 
+var func2 = function(){
+	console.log("나도 함수야!");
+}
+
+// 함수 호출 코드 
+func();
+func2();
+
+console.log("-----");
+console.log(func);
+console.log(func2);
+
+console.log("-----");
+console.log(typeof(func));
+console.log(typeof(func2));
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

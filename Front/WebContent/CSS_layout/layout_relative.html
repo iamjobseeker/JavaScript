@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+.box{
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+}
+
+.relative{
+	position: relative;
+}
+
+#a1{
+	z-index: 11; /* 화면상 z축, 앞으로 튀어나옴 */ 
+	background: orange;
+
+/* 	left: 50px; */ 
+/* 	right: 50px; */
+	top:50px;
+	left:50px;
+}
+
+#a2{
+	z-index: 0;
+	background: skyblue;
+/* 	left: 100px; */
+/* 	right: 100px; */
+	top: 100px;
+	left: 100px;
+}
+
+</style>
+</head>
+<body>
+<div id = "a1" class = "box absolute"> 절대위치 박스</div>
+<div id = "a2" class = "box absolute"> 절대위치 박스</div>
+
+
+</body>
+</html>

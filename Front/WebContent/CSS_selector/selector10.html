@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+/* 아이디 선택자 > 클래스 선택자 */
+.pClass{color:blue !important;}
+#pId{color:red;}
+
+</style>
+</head>
+<body>
+<div>
+<h1> 스타일 적용 우선순위 </h1>
+
+<!-- 인라인 방식 > 임베디드 방식 -->
+<p id="pId" class="pClass" style="color:orange;"> 
+!important test </p><br>
+
+<fieldset style="width: 300px;">
+<p>
+1. !important<br>
+2. 인라인<br>
+3. 임베디드<br>
+4. @import<br>
+5. link<br>
+6. link안에 적용된 @import<br>
+7. 브라우저 기본 스타일 <br>
+</p>
+</fieldset>
+
+</div>
+</body>
+</html>

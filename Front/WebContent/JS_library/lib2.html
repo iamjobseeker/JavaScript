@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+// lib1과 동일
+// 알림창 5번 출력 후 중단 
+// setInterval에 직접 함수를 만들었음 
+var cnt = 1;
+var timerId = setInterval(function(){
+	alert("Hello");
+	
+	if(cnt++>=5){
+		clearInterval(timerId);
+	}
+}, 1000);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

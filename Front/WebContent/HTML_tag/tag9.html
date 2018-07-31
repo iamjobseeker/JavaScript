@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1 id=top> 회원가입 </h1><br>
+
+<form action="#" method='get'>
+
+	<!-- label은 내부 요소를 하나로 묶어주는 역할 -->
+	<label> 이름  <input type="text" name="name" /></label> <br> <br>
+	
+	<label for="uId">아이디 </label> 
+	<input type="text" id="uId" size="18" name="userId" placeholder="아이디 입력"/> <br><br>
+		<!-- id값은 고유한 값 식별자 --> 
+	
+	<label for="userPwd"> 비밀번호  </label>	
+	<input type="password" id="userPwd" size="16.5" name="userPwd" placeholder="비밀번호 입력" /> <br><br>
+		<!-- type password는 복사를 방지 -->
+		
+	<label for="chkBox">체크1</label>
+	<input type="checkbox" id="chkBox" name="chkBox" />  
+	<label for="chkBox">체크2</label> <br><br>
+	
+	<input type="radio" name="gender" value="f" checked="checked"/> 여 
+	<input type="radio" name="gender" value="m" /> 남 <br><br>
+	
+	<input type="button" id="btnOk" value="확인" onclick="alert('확인버튼눌림');" /> <br><br>
+
+	전화번호 <input type="tel" name="tel" size=15/> <br><br>
+
+	<!-- date picker -->
+	생년월일 <input type="date" name="date" value='1993-11-28'> <br><br>
+	
+	<input type="range" name="range" min="100" max="500" value="300" /> <br><br>
+	
+	<input type="hidden" name="hiddenDate" value="안 보임"/>
+	
+	<input type="color" name="color" value="#0000FF" /><br><br>
+	
+	<input type="file" name="file"><br><br>
+
+	<input type="reset" value="모두 지우기" />
+	
+	<input type="submit" value="전송"/><br><br><br>
+	
+	<fieldset style="width: 450px;">
+	<legend>회원가입 설명</legend>
+	체크박스 : 체크 되어있으면 name=on으로 데이터 전송<br>체크 해제되어있으면 변수가 아예 전송되지 않음<br><br>
+	라디오버튼 : name이 같으면 하나의 라디오 버튼으로 취급<br>
+	&emsp;전송되는 데이터는 value의 값을 전송<br>
+	&emsp;아무것도 선택되지 않으면 변수를 생성하지 않음<br><br>
+	히든데이터 : 페이지에는 보이지 않지만 전송해야 하는 데이터
+	</fieldset> <br><br><br><br><br><br><br>
+	
+	<a href = "#top"><img src=./topimg.png width='30px' height='30px' title="위로 이동"></a>
+	
+</form>
+
+</body> 
+</html>

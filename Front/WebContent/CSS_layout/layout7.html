@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+/* 박스모델 - block */
+/* div{ */
+/* 	border: 1px solid black;  */
+/* 	width: 400px; */
+/* 	height: 300px; */
+/* 	overflow: hidden; */
+/* } */
+
+.box{
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+}
+
+/* left, right, top, bottom 모서리를 절대 위치로 두고 상하좌우 간격을 가진다 */
+/* 해상도 상의 첫 화면을 기준으로 적용된다 */
+/* 화면 모서리에 대해 항상 일정한 간격을 유지하고 싶을 때 absolute 사용 */
+.absolute{
+	position: absolute;
+}
+
+#a1{
+	z-index: 11; /* 화면상 z축, 앞으로 튀어나옴 */ 
+	background: orange;
+
+/* 	left: 50px; */ 
+/* 	right: 50px; */
+	bottom:50px;
+	left:50px;
+}
+
+#a2{
+	z-index: 0;
+	background: skyblue;
+/* 	left: 100px; */
+/* 	right: 100px; */
+	top: 100px;
+	left: 100px;
+}
+
+/* 원래 존재했던 위치를 기준으로 움직인다 */
+.relative{
+	position: relative;
+	left: 50px; 
+	bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+<div id = "a1" class = "box absolute"> 절대위치 박스</div>
+<div id = "a2" class = "box absolute"> 절대위치 박스</div>
+
+<div class="box relative"> 상대위치 박스 </div>
+
+</body>
+</html>

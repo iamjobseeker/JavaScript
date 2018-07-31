@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<style type="text/css">
+
+/* 인접형제, h1바로 다음에 오는 형제 */
+h1+p{background: yellow;}
+
+/* 일반형제, h1뒤에 오는 모든 형제들 */ 
+h1~p{border: 1px solid red;}
+
+h1~.test{color:chocolate;} 
+
+</style>
+
+<title>Insert title here</title>
+</head>
+<body> 
+
+<div>
+
+<p>첫번째</p>
+<h1>두번째</h1>
+<p>세번째</p>
+<p class="test">네번째</p>
+<p class="test">다섯번째</p>
+<h1>여섯번째</h1>
+<p>일곱번째</p>
+<p>여덟번째</p>
+
+</div>
+
+</body>
+</html>

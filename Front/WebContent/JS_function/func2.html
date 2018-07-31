@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function hello(){
+	console.log("안녕하세요");
+}
+
+function thanks(){
+	console.log("감사해요");
+}
+
+// 매개변수, return으로 함수가지기
+// 함수타입 변수를 매개변수로 전달
+// 함수를 리턴값으로 사용
+function action(fn){
+	fn();
+	console.log("<<fn>>" + fn);
+	
+	return fn;
+} 
+
+// action: 함수 실행 환경
+// hello, thanks: 톱니바퀴 
+action(hello) ();
+action(thanks) ();
+
+console.log("-----");
+action(action(action(thanks)));
+
+</script></head>
+<body>
+
+</body>
+</html>

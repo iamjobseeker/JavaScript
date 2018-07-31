@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+// JS 클로저 함수 
+// 자신이 호출되고 정의되는 상황을 기억한다 
+// 1회 사용이 아닌 연결되는 개념 
+
+function callback( func ){
+	func();
+}
+
+function add(n1, n2){
+	var sum = n1+n2;
+	
+	callback( function () {
+		console.log(sum); // 매개변수로 전달되는 함수가 바로 클로저 함수 
+	});
+}
+
+add(10, 20);
+
+</script>
+</head> 
+<body>
+
+</body>
+</html>

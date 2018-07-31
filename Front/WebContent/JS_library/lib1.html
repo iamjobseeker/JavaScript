@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+// setInterval 함수
+
+function hello() {
+	alert("Hello"); 
+}
+
+function Bye(){
+	alert("Bye");
+}
+
+//1000ms마다 hello라는 알림창 띄움
+// setInterval(hello, 1000); 
+
+//5000ms가 지나면 Bye라는 알림창을 한 번 띄움 
+setTimeout(Bye, 2500);
+
+// 1초마다 hello 함수 호출하기
+var timerId = setInterval(hello, 1000);
+
+// setInterval 중단시키기 
+function stop() {
+	clearInterval(timerId); 
+}
+
+// 5초 뒤에 동작
+setTimeout( stop, 5000);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

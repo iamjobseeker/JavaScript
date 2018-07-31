@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"> /* Style Sheet, CSS*/ 
+table{
+	border: 1px solid #ccc;  /* 테이블 외부 스타일 지정 */
+	border-collapse: collapse; /* 테두리 겹치는 부분을 하나로 생략 */
+}
+td, th{
+	border: 1px solid #ccc; /* 테이블 내부 스타일 지정 */
+}
+</style>
+</head>
+<body>
+
+<h1> 테이블 태그</h1>
+<hr> <br>
+
+<table>
+<tr>
+	<td> 1x1셀</td>
+	<td> 1x2셀</td>
+	<td rowspan="2"> 1x3셀</td>
+	<td rowspan="3"> 1x4셀</td>
+</tr>
+<tr>
+	<td colspan="2"> 2x1셀</td> <!--  2개의 셀을 하나로 합치기 -->
+<!-- 	<td> 2x2셀</td> -->
+</tr>
+<tr>
+	<td> 3x1셀 </td>
+</tr>
+</table>
+
+</body>
+</html> 
