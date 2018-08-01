@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+// DOM 트리 완성 이후에 동작하도록 작성 
+window.onload = function() {
+	var img = document.createElement("img");
+	// src, width, height, alt, title 
+	// 위치, 너비, 높이, 이미지 검색 실패시 텍스트, 마우스 팝업 텍스트
+	
+	img.src = "chu.jpg";
+	img.width = "400"; // 단위가 이미 px지정되어 있으므로 단위는 생략해야함 
+	img.setAttribute("height", "300px"); 
+	img.setAttribute("myAttr", "Apple"); // 비 표준 속성
+	
+	console.log( img.getAttribute("myAttr") ); // 속성값 저장 후 사용하기 
+	
+	var imgs = getElementsByTagName("img"); 
+	imgs[0].getAttribute("idx");
+	
+	var body = document.body;
+	body.appendChild(img); 
+};
+ 
+</script>
+
+</head>
+<body>
+
+<img idx ="1"/> <!-- 비표준 방식이라 HTML에서는 사용불가 -->
+<img data-idx="1"/> <!-- data- 를 앞에 붙여서 표준방식으로 만들기 --> 
+
+</body>
+</html>

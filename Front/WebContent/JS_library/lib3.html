@@ -6,11 +6,33 @@
 <script type="text/javascript">
 
 // Date 객체 
-
+// 서식을 갖춘 현재 시간
 var d1 = new Date();
 console.log(d1);
 
+// 기준 시간으로부터 현재까지 흘러간 시간 
+// 밀리초 단위의 HWClock
+console.log(Date.now());
 
+console.log("-----");
+console.log(d1.getHours() + "시");
+console.log(d1.getMinutes() + "분");
+console.log(d1.getSeconds() + "초");
+console.log(d1.getMilliseconds());
+
+// 1초에 한 번씩 현재 시간을 출력 
+var cnt = 1;
+console.log("-----");
+setInterval(function(){
+	var d = new Date();
+	document.write(d.getHours() + "시"
+			+ d.getMinutes() + "분"
+			+ d.getSeconds() + "초");
+	
+// 	if(cnt++>1){
+// 		clearInterval(timerId);
+// 	}
+}, 1000);
 
 </script>
 </head>

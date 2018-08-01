@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+.content { border: 1px solid black; } 
+
+/* 사용자 정의 속성 사용하기  */ 
+[data-type="text"]{ color: red; }
+[data-type="number"] { color: blue; } 
+
+.content[data-idx="4"] { background: #ccc; } 
+
+</style>
+
+</head>
+<body>
+
+<!-- class : (표준) 공통된 CSS를 적용하기 위한 카테고리 -->
+<!-- data-idx : (사용자 정의) h1 태그의 순번 정의  -->
+<!-- data-type : (사용자 정의) 텍스트 노드의 데이터 타입  --> 
+<!-- class="content text 1"과 같이 한꺼번에 지정해서 사용할수도 있지만 -->
+<!-- 사용시 전체 검색으로 성능 저하를 일으킴 --> 
+<h1 class="content" data-idx="1" data-type="text">첫 번째 </h1>
+<h1 class="content" data-idx="2" data-type="number">22 </h1>
+<h1 class="content" data-idx="3" data-type="text">세 번째 </h1>
+<h1 class="content" data-idx="4" data-type="number">44 </h1>
+
+</body>
+</html> 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function hello() {
+	alert("이벤트 리스너 코드의 길이가 길어지면!\n"
+			+"함수를 아예 따로 작성해서 호출되게 해주세요");
+}
+</script>
+</head>
+<body>
+
+<!-- 동작 바로 지정하기 --> 
+<div onclick="alert('HI');">동작 바로 지정하기</div> 
+<!-- 함수 지정 및 호출 한번에하기 -->
+<div onclick="function hi(){alert('HIIIIIII');} hi()">함수 지정 및 호출 한번에하기</div>  
+<!-- 함수 호출만 하고 함수 정의는 JavaScript에서 하기 -->
+<div onclick="hello();">함수 호출만 하고 함수 정의는 JavaScript에서 하기</div>
+
+</body>
+</html>

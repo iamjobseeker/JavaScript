@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+window.open("http://www.naver.com");
+
+// 자바스크립트의 모든 객체의 최상위는 window객체
+// 변수도 window 객체에 속하게 된다
+var num = 123;
+console.log(window.num);
+console.log(num); // 위와 같은 결과. window는 너무 보편적이기 때문에 생략가능 
+
+// window.close(); // 현재 브라우저 창 닫기 
+
+console.log("-----");
+// 브라우저의 가로 너비
+// 팝업창 위치 조정할 때 사용 
+console.log(screen.availWidth);
+
+// 모두 window에 속해있음
+// window.parseInt
+// window.parseFloat
+// window.String
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

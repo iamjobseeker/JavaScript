@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+window.onload = function() { 
+	// getElementsByTagName 해당 name을 가지는 요소 객체들을 반환 
+	var h3 = document.getElementsByTagName("h3");
+	console.log(h3);
+	
+	// JavaScript가 HI로 변경됨 
+	h3[0].innerHTML = "HI"; 
+	// DOM이 HELLO로 변경됨 
+	h3[1].innerHTML = "HELLO"; 
+	
+	console.log("-----------");
+	var h1 = document.getElementsByTagName("h1"); 
+	h1[0].innerHTML = "HAHAHAHA"; 
+	
+	console.log("-----------");
+	// DOM(HELLO)제거하기
+	h3[1].remove(); 
+	console.log(h3);
+} 
+
+</script>
+</head>
+<body>
+
+<h1>제목</h1>
+<h3>JavaScript</h3>
+<h3>DOM</h3>
+<h3>GetTagName</h3> 
+
+</body>
+</html>
