@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript"> 
+
+$(document).ready(function( ) {
+	
+	// <body>를 찾아 객체로 반환
+	console.log($("body")); 
+	
+	// ▼ jQuery를 이용하면 id="p1"인 객체를 쉽게 선택할 수 있다 
+	console.log($("#p1")); 
+	
+	console.log("-------");
+	
+	// p1은 js 문법, $p1은 jQuery 문법으로 분류하면 보기 편하다 
+	var p1 = document.getElementById("p1"); // JS DOM 객체
+	var $p1 = $(p1); // JS DOM 객체 -> jQuery 객체 
+	var p = $(p1); 
+	console.log(p1);
+	console.log(p); 
+	
+	console.log("-------");
+	
+	// id=p1인 객체를 찾아 jQuery로 감싸고 css로 꾸미기 
+	$("#p1").css("border", "1px solid red"); // jQuery 문법
+	p3.style.border = "1px solid blue"; // JS 문법 
+	
+	$(".p2").css("color", "green"); 
+	// 	$("last-child")와 같은 문법은 jQuery에서만 사용 가능 
+	$("p:last-child").css("color", "gray");  
+	$("div:first-child").css("font-size", "25px");
+}); 
+
+// console 출력 내용 
+// n.fn.init [body, prevObject: n.fn.init(1), context: document, selector: "body"]
+// 0 : body - JS DOM Object을 나타냄 
+
+
+</script>
+
+</head>
+
+<!-- body - div - p -->
+<!-- jQuery로 원하는 <p>태그를 쉽게 지정할 수 있다 ▼-->
+<body>
+	<div>
+		<p id="p1"> Hi</p>
+		<p class="p2">Hello</p>
+		<p id="p3">Welcome</p>
+	</div>
+</body>
+</html>

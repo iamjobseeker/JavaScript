@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+	
+$(document).ready(function( ) {
+	
+	// p태그에 red class 부여 
+	$("p").addClass("red");
+	$("p").addClass("borderGray"); 
+	
+	// Class 하나씩 제거
+	$("p").removeClass("red");
+
+	// Class 전부 제거 
+	$("p").removeClass();  
+	
+	// 다시 blue class 지정 
+	$("p").attr("class", "blue");  	
+	
+	$("p").attr({"a":"1",
+				 "b":"2",
+			     "c":"3" 
+		}); 
+}); 
+</script> <!--  자바스크립트 끝 -->
+
+<style type="text/css">
+.red {color: red;} /* red Class 속성을 가지면 색이 빨강색으로 바뀐다 */ 
+.blue {color: blue; }
+.borderGray {border: 1px solid gray; } 
+</style> <!-- CSS 끝 -->
+
+</head><body>
+
+<div style="width: 300px; height: 200px;">
+	<p>하나</p>
+	<p>둘</p> 
+	<p>셋</p> 
+</div>
+
+</body>
+</html>
+

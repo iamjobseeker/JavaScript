@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+
+function sayHi() {alert("Hi");}
+function addRed() {$(this).css("color", "red");}
+function addBlue() {$(this).css("color", "blue");} 
+
+$(document).ready(function() {
+	// 이벤트 발생시마다 동작 발생
+	$("#btnOk").on({
+		click: sayHi,
+		mouseenter: addRed,
+		mouseleave: addBlue 
+	});  
+	
+	// 첫 이벤트 발생(한번)시에 동작 발생 
+	$("#btnAlert").one({
+		click: sayHi,
+		mouseenter: addRed,
+		mouseleave: addBlue 
+	})
+	
+	// mouseleave 기능 off 
+	// on, one으로 설정한 이벤트리스너 제거 
+// 	$("button").off("mouseleave");
+	
+}); 
+
+</script>
+</head>
+<body>
+
+<div>
+	<button id="btnOk">확인</button>
+	<button id="btnAlert">알림</button>
+</div>
+
+</body>
+</html>

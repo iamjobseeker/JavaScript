@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 애니메이션 추가하기 --> 
+
+<style type="text/css">
+
+#sliderbox { /* 기준점을 정해줌 */ 
+	margin:0 auto; /* 이미지를 페이지 중앙에 위치 */ 
+	position: relative; 
+	width: 300px;
+	height: 200px;
+	/* 넘치는 부분 자르기 */ 
+ 	overflow: hidden;  
+	border: 1px solid black;
+}
+
+#slider { 
+	margin: 0;
+	padding: 0;
+	list-style: none; 
+}
+
+#slider li {
+/* 	기준점 왼쪽 모서리가 되고 여러장의 사진이 겹쳐진다  */
+	position: absolute;  
+} 
+
+#slider li img { /* 이미지 크기 고정 */  
+	width: 300px;
+	height: 200px; 
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	
+<script type="text/javascript">
+
+$(document).ready(function( ) {
+	
+	// 이미지 전체를 담은 리스트
+	 var $slider_list = $("#slider li"); 
+	
+	// 모든 이미지를 left: 300px로 보내기(숨기기)
+	 $slider_list.each(function(){
+		 $(this).css("left", "300px");
+	 }); 
+	
+	// 첫번째 이미지를 div 안쪽으로 보내기 (첫 이미지 보여주기) 
+	 $("#slider li:first-child").css("left", 0); 
+	
+	// 클릭이 될 때마다 이미지를 한장씩 슬라이드(교체)
+	var curSlide = 0; // 현재 보고있는 슬라이드 번호
+	setInterval(function() { // 시간이지나면 넘어감 
+	// 	$("#sliderbox").on("click", function( ) { // 클릭하면 넘어감
+
+		var nextSlide = (curSlide+1) % $slider_list.length;
+		
+		$slider_list.eq(nextSlide).css("left", "300px");
+		$slider_list.eq(curSlide).animate({"left": "-=300px"});
+		$slider_list.eq(nextSlide).animate({"left": "-=300px"}); 
+		
+		curSlide++; 
+		curSlide = curSlide % $slider_list.length; 
+		
+		// 5(번째 슬라이드)->0(번째 슬라이드)로 만들어 슬라이드 순환구조 만들기 
+		if(curSlide==5){
+			curSlide=0;
+			$slider_list.eq(curSlide).css("left", "0px");
+		}
+	}, 2000); 
+});
+
+</script>
+
+</head>
+<body>
+
+<div id="sliderbox">
+	<ul id="slider">
+		<li><img src="https://i.imgur.com/viuPHoS.gif"/></li>
+		<li><img src="https://i.imgur.com/i7sW1WN.jpg"/></li>
+		<li><img src="https://i.imgur.com/MrZcQnN.jpg"/></li> 
+		<li><img src="http://i.imgur.com/hhsrPwq.jpg"/></li>
+      	<li><img src="http://i.imgur.com/RstXW7v.jpg"/></li>
+	</ul>
+
+</div>
+
+</body>
+</html>

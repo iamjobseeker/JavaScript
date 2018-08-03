@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	var $div = $("<div>new Div</div>");
+	var $div2 = $div.clone(); // clone을 해야 깊은복사, 개체 새롭게 생성
+	
+	// $(document.body)는 <body></body>태그를 의미 
+	$(document.body).prepend($div2); // 맨 앞
+	$(document.body).append($div); // 맨 뒤 
+	$("#myDiv").appendTo(document.body); 
+	
+	// 화면에 보이는 텍스트 구성
+	// 태그를 태그로 인식
+	$div2.html("<h1>changed</h1>");
+	// 단순 텍스트, 게시글 작성 및 저장
+	// 태그를 단순 문자열로 인식 
+	$div.text("<h1>changed</h1>"); 
+	
+}); 
+
+</script></head><body>
+
+<div id="myDiv"> </div>
+
+</body>
+</html>
+
